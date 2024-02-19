@@ -152,14 +152,14 @@
       @foreach ($songs as $song)
 
         <div class="col-12 col-md-6 col-lg-4 my-4 d-flex justify-content-center align-items-center">
-        @if ($song->platform == 'Youtube')
+        @if ($song->platform == 'youtube')
           <div class="card my-4 mx-2 youtube-background song-card">
             @else
           <div class="card my-4 mx-2 spotify-background song-card">
             @endif
             <div class="card-body">
               <a href="./songs/{{ $song->id }}">
-              @if ($song->platform == 'Youtube')
+              @if ($song->platform == 'youtube')
                 <h5 class="card-title song-title song-title-youtube">
                   {{$song->song_title}}
                 </h5>
@@ -179,7 +179,7 @@
                 class="text-reset text-none"
                 target="_blank"
               >
-              @if ($song->platform == 'Youtube')
+              @if ($song->platform == 'youtube')
                 <div class="watch watch-youtube">
                   <i class="fa-brands fa-youtube"></i>
                   <span class="ms-2">Watch now on Youtube</span>

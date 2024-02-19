@@ -91,7 +91,7 @@
               class="text-reset text-none"
               target="_blank"
             >
-            @if ($song->platform == "Youtube") 
+            @if ($song->platform == "youtube") 
               <div class="watch watch-youtube">
                 <i class="fa-brands fa-youtube"></i>
                 <span class="ms-2">Watch now on Youtube</span>

@@ -17,14 +17,14 @@ use App\Models\Song;
 
 Route::get('/',[SongController::class,"songs"]);
 
-Route::get('/index',[SongController::class,"songs"]);
+Route::get('/index',[SongController::class,"songs"])->name('home');
 
-Route::get('/songs',[SongController::class,"songs"]);
+// Route::get('/songs',[SongController::class,"songs"]);
 
 Route::get('/share', function() {
     return view('share');
-});
-Route::get('/songs/{id}',[SongController::class,"Song"]);
+}) ->name('share');
+Route::get('/songs/{id}',[SongController::class,"Song"])->name('song');
 
 Route::post('/share',[SongController::class,"share"]);
 

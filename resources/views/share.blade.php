@@ -45,7 +45,7 @@
       <div class="row">
         <div class="col-md-6 mx-auto">
           <h2 class="text-center mb-4">Share your Song</h2>
-          <form method="POST" action="/index">
+          <form method="POST" action="{{url('/share')}}">
           @csrf 
             <div class="form-group">
               <label for="title">Song Title</label>
