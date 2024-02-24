@@ -84,6 +84,17 @@
         <div class="col-md-8 mx-auto">
           <h1 class="text-center">{{$song->song_title}}</h1>
           <h3 class="text-center pt-3">{{$song->artist_name}}</h3>
+          <div class="edit d-flex justify-content-center align-items-center py-5 ">
+            <a href="/edit/{{$song->id}}" style="text-decoration: none">Edit this song</a>
+          </div>
+          <form method="POST" action = "/delete/{{$song->id}}">
+            @csrf
+
+            <button type="submit">      
+            Delete this song 
+            </button>
+           </form>
+          
           <div class="d-flex justify-content-center align-items-center py-5">
             
             <a

@@ -21,12 +21,17 @@ Route::get('/index',[SongController::class,"songs"])->name('home');
 
 // Route::get('/songs',[SongController::class,"songs"]);
 
+
+Route::get('/songs/{id}',[SongController::class,"Song"])->name('song');
 Route::get('/share', function() {
     return view('share');
 }) ->name('share');
-Route::get('/songs/{id}',[SongController::class,"Song"])->name('song');
-
 Route::post('/share',[SongController::class,"share"]);
+Route::get('/edit/{id}',[SongController::class,"edit"]);
+Route::post('/edit/{id}',[SongController::class,"update"]);
+Route::post('/delete/{id}',[SongController::class,"delete"]);
+
+
 
 
 
